@@ -1,10 +1,10 @@
-/* Atur Viewport */
+/* Pengaturan Dasar */
 body {
     background-color: #f9f9f9;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Pastikan padding dan border tidak mempengaruhi ukuran elemen */
 }
 
 /* Gaya Header */
@@ -13,7 +13,7 @@ header {
     color: white;
     text-align: center;
     padding: 15px;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Ukuran font lebih besar untuk visibilitas */
 }
 
 /* Navigasi */
@@ -28,106 +28,108 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Gunakan inline-block untuk tata letak horizontal */
     margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Tambahkan transisi untuk efek hover yang halus */
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    color: #ffd700; /* Warna hover yang lebih cerah */
 }
 
 /* Bagian Utama */
 section {
-    padding: 20px;
+    padding: 20px; /* Padding untuk ruang antar elemen */
     text-align: center;
 }
 
 /* Gaya Karakter */
 .character-list {
-    width: 60%;
-    margin: 20px auto;
+    width: 60%; /* Lebih sempit di layar besar */
+    margin: 20px auto; /* Margin otomatis untuk penyelarasan */
     padding: 0;
     list-style: none;
 }
 
 .character-list li {
-    padding: 15px;
-    background-color: #e5e5e5;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin: 10px 0;
+    padding: 15px; /* Padding untuk ruang antar elemen */
+    background-color: #e5e5e5; /* Warna latar belakang */
+    border: 1px solid #ccc; /* Tambahkan border */
+    border-radius: 10px; /* Tambahkan sudut bulat */
+    margin: 10px 0; /* Jarak antar elemen */
     text-align: center;
-    transition: all 0.3s;
+    transition: all 0.3s; /* Transisi untuk efek hover yang halus */
+    margin-right: 15px;
+    margin-bottom: 20px;
 }
 
 .character-list li img {
-    width: 120px;
+    width: 120px; /* Ukuran gambar yang proporsional */
     height: 120px;
-    border-radius: 50%;
+    border-radius: 50%; /* Gambar bulat */
     border: 1px solid #333;
 }
 
 .character-list li:hover {
-    transform: scale(1.05);
-    background-color: #dcdcdc;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Efek skala saat di-hover */
+    background-color: #dcdcdc; /* Warna latar belakang saat di-hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
 }
 
 /* Gaya Galeri */
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 15px; /* Jarak antar gambar */
 }
 
 .gallery img {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: transform 0.3s;
-    width: 150px;
+    border-radius: 5px; /* Sudut bulat */
+    border: 1px solid #ccc; /* Tambahkan border */
+    transition: transform 0.3s; /* Transisi untuk efek hover */
+    width: 150px; /* Ukuran gambar yang sama */
     height: 150px;
 }
 
 .gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efek skala saat di-hover */
 }
 
 /* Gaya Footer */
 footer {
-    background-color: #333;
+    background-color: #333; /* Warna latar belakang footer */
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 15px; /* Padding untuk ruang */
 }
 
 /* Tombol Kembali ke Atas */
 #backToTop {
     background-color: purple;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px; /* Tambahkan padding */
+    border-radius: 5px; /* Sudut bulat */
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Transisi untuk hover */
 }
 
 #backToTop:hover {
-    background-color: #c70039;
-    transform: scale(1.05);
+    background-color: #c70039; /* Warna saat di-hover */
+    transform: scale(1.05); /* Efek skala saat di-hover */
 }
 
 /* Media Queries untuk Responsivitas */
-/* Layar dengan lebar 375px */
+/* Layar dengan lebar 375px atau kurang */
 @media (max-width: 375px) {
     .character-list {
         width: 90%; /* Lebih lebar untuk perangkat kecil */
-        margin: 10px auto; /* Lebih sedikit margin */
+        margin: 10px auto;
     }
 
     section {
@@ -176,8 +178,9 @@ footer {
         width: 75%; /* Lebih sempit */
     }
 
-    nav ul {
-        text-align: center; /* Pastikan teks tetap rata tengah */
+    nav ul li {
+        display: inline-block; /* Tata letak horizontal */
+        margin: 5px 10px; /* Tambahkan jarak */
     }
 
     section {
@@ -193,5 +196,6 @@ footer {
 
     .gallery {
         flex-direction: row; /* Tata letak horizontal */
+        gap: 20px; /* Jarak antar gambar */
     }
 }
