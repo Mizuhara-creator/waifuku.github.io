@@ -86,14 +86,15 @@ section {
     display: flex;
     justify-content: center;
     gap: 15px; /* Jarak antar gambar */
+    margin: 0 auto;
 }
 
 .gallery img {
+    width: 150px; /* Ukuran gambar */
+    height: 150px; /* Ukuran gambar */
     border-radius: 5px; /* Sudut bulat */
-    border: 1px solid #ccc; /* Tambahkan border */
-    transition: transform 0.3s; /* Transisi untuk efek hover */
-    width: 150px; /* Ukuran gambar yang sama */
-    height: 150px;
+    border: 1px solid #ccc; /* Border untuk gambar */
+    transition: transform 0.3s;
 }
 
 .gallery img:hover {
