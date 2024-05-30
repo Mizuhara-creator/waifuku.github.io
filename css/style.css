@@ -1,4 +1,4 @@
-/* Pengaturan Dasar */
+/* CSS */
 body {
     background-color: #f9f9f9;
     font-family: 'Roboto', sans-serif;
@@ -147,78 +147,27 @@ footer {
     transform: scale(1.05); /* Efek skala saat di-hover */
 }
 
-/* Media Queries untuk Responsivitas */
-/* Layar dengan lebar 375px atau kurang */
-@media (max-width: 375px) {
+/* Media Queries untuk Responsif */
+@media only screen and (min-width: 768px) {
     .character-list {
-        width: 90%; /* Lebih lebar untuk perangkat kecil */
-        margin: 10px auto;
-    }
-
-    section {
-        padding: 10px; /* Kurangi padding */
-    }
-
-    nav ul li {
-        display: block; /* Tata letak vertikal */
-        margin: 5px 0; /* Jarak antar elemen */
-    }
-}
-
-/* Layar dengan lebar 734px atau kurang */
-@media (max-width: 734px) {
-    .character-list {
-        width: 80%; /* Lebih lebar */
+        width: 80%;
     }
 
     .character-list li {
-        padding: 10px; /* Kurangi padding */
-    }
-}
-
-/* Layar dengan lebar 412px atau kurang */
-@media (max-width: 412px) {
-    header {
-        padding: 10px; /* Kurangi padding */
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Jarak antar elemen */
-    }
-}
-
-/* Layar dengan lebar 667px atau kurang */
-@media (max-width: 667px) {
-    .gallery {
-        flex-direction: column; /* Tata letak vertikal */
-        gap: 10px; /* Jarak antar gambar */
-    }
-}
-
-/* Layar dengan lebar 768px atau kurang */
-@media (max-width: 768px) {
-    .character-list {
-        width: 75%; /* Lebih sempit */
-    }
-
-    nav ul li {
-        display: inline-block; /* Tata letak horizontal */
-        margin: 5px 10px; /* Tambahkan jarak */
-    }
-
-    section {
-        padding: 15px; /* Kurangi padding */
-    }
-}
-
-/* Layar dengan lebar lebih dari 768px */
-@media (min-width: 769px) {
-    .character-list {
-        width: 60%; /* Lebih sempit */
+        flex-basis: calc(33.33% - 20px);
     }
 
     .gallery {
-        flex-direction: row; /* Tata letak horizontal */
-        gap: 20px; /* Jarak antar gambar */
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .character-list {
+        width: 60%;
+    }
+
+    .character-list li {
+        flex-basis: calc(25% - 20px);
     }
 }
